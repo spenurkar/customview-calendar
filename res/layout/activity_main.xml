@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_cal_tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:background="#fff" >
+
+        <RelativeLayout
+            android:id="@+id/month_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" >
+
+            <Button
+                android:id="@+id/calendar_btn_previousmonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="Prev" />
+
+            <Button
+                android:id="@+id/calendar_btn_nextmonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="Next" />
+
+            <TextView
+                android:id="@+id/calendar_tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="January 2013"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#5b5b5b"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/calendar_days"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/month_layout"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="5dp"
+            android:background="#b6d9e6"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp" >
+
+            <TextView
+                android:id="@+id/txtSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="sun"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="mon"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="tue"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="wed"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="thu"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="fri"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="sat"
+                android:textSize="12sp"
+                android:textStyle="normal" >
+            </TextView>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/month_gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_below="@+id/calendar_days"
+            android:background="#e7e9ea"
+            android:fadingEdge="none"
+            android:gravity="top|left"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="7"
+            android:padding="1dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" >
+        </GridView>
+    </RelativeLayout>
+
+</RelativeLayout>
